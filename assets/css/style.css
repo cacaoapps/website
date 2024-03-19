@@ -88,7 +88,7 @@ section {
 
 @media (max-width: 992px) {
   .breadcrumbs {
-    margin-top: 57px;
+    margin-top: 70px;
   }
 }
 
@@ -1776,7 +1776,7 @@ section {
 # Blog
 --------------------------------------------------------------*/
 .blog {
-  padding: 100px 0 20px 0;
+  padding: 20px 0 20px 0;
 }
 
 .blog .entry {
@@ -1787,8 +1787,21 @@ section {
 
 .blog .entry .entry-img {
   max-height: 440px;
-  margin: -30px -30px 20px -30px;
+  margin: 0 -30px 0 -30px;
   overflow: hidden;
+}
+
+/** Image unsplash credits centered in light grey small font **/
+.blog .entry .entry-img-credits {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/** Image unsplash credits link light grey with underline **/
+.blog .entry .entry-img-credits a {
+  color: #aaa;
+  text-decoration: underline;
 }
 
 .blog .entry .entry-title {
