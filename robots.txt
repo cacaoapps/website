@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block PetalBot
+User-agent: PetalBot
+Disallow: /
+
+# Crawl delay for overly enthusiastic bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+Sitemap: https://greetextai.com/sitemap.xml
