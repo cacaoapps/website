@@ -1,11 +1,11 @@
 {
-    "name": "greetextai",
-    "short_name": "greetextai",
+    "name": "Greetext AI",
+    "short_name": "Greetext AI",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#D9C4FF",
+    "background_color": "#8E4DFF",
     "theme_color": "#8E4DFF",
-    "description": "A new Flutter project.",
+    "description": "Wishes and Greeting powered by AI",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
