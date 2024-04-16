@@ -63,47 +63,6 @@
 	  smartlook('init', '4a1753c6c6d5c283f61de5ff875ad569db08de88', { region: 'eu' });
   </script>
 
-  <script>
-	// For Android, redirect to https://play.google.com/store/apps/details?id=com.cacaoapps.greetextai
-	// For iOS, open /app/
-	// For Desktop, open in a popup of iframe with the ratio of 9:16, at the center of the screen on top of the page, and a nicely styled close (X) button
-	function downloadApp() {
-		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		if (isMobile) {
-			var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-			if (isIOS) {
-				window.location.href = '/app/';
-			} else {
-				window.location.href = 'https://play.google.com/store/apps/details?id=com.cacaoapps.greetextai';
-			}
-		} else {
-			// Open in an iframe inside a popup
-			var popup = document.createElement('div');
-			popup.style.position = 'fixed';
-			popup.style.top = '0';
-			popup.style.left = '0';
-			popup.style.width = '100%';
-			popup.style.height = '100%';
-			popup.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-			popup.style.zIndex = '9999';
-			popup.style.display = 'flex';
-			popup.style.justifyContent = 'center';
-			popup.style.alignItems = 'center';
-			popup.style.cursor = 'pointer';
-			popup.onclick = function() {
-				document.body.removeChild(popup);
-			};
-			var iframe = document.createElement('iframe');
-			iframe.src = 'app/';
-			iframe.style.width = '45vh';
-			iframe.style.height = '80vh';
-			iframe.style.border = 'none';
-			popup.appendChild(iframe);
-			document.body.appendChild(popup);
-		}
-	}
-  </script>
-
   <!-- =======================================================
   * Template Name: FlexStart
   * Updated: Jan 29 2024 with Bootstrap v5.3.2
@@ -149,7 +108,7 @@
 		  <h2 data-aos="fade-up" data-aos-delay="400">Happy Birthday Wishes, Wedding Wishes, Christmas Wishes, New Year Eve Wishes, for a friend, loved one or even your boss! You can be funny, casual, religious or romantic</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
-              <a href="https://play.google.com/store/apps/details?id=com.cacaoapps.greetextai" target="_blank" class="btn-outlined scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <a href="#" onclick="downloadApp()" class="btn-outlined scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Download Now</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
@@ -178,7 +137,7 @@
                 Have you ever found yourself in that familiar scenario where you're staring at your phone, racking your brain for the perfect words to convey your heartfelt wishes on someone's birthday or to celebrate their incredible achievement of receiving their well-deserved diploma? It can be a moment of pressure and uncertainty, wanting to encapsulate your joy and pride in just the right way. But fear not, for with a little guidance and creativity, you can transform those moments of hesitation into ones filled with confidence and warmth. So, fret no more, as we're here to provide you with inspiring ideas and thoughtful messages that will ensure you never struggle to express your sentiments again!
               </p>
               <div class="text-center text-lg-start">
-                <a href="https://play.google.com/store/apps/details?id=com.cacaoapps.greetextai" target="_blank" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
+                <a href="#" onclick="downloadApp()" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
                   <span>Download Now</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -203,7 +162,7 @@
                 Stop wasting precious moments of your day feeling the pressure of coming up with the perfect words to express your feelings to a loved one. Whether it's a birthday, anniversary, wedding, Christmas, New Year, Valentine's Day, or any other special occasion, the task of crafting meaningful messages can seem daunting. However, with a few simple strategies and thoughtful ideas, you can transform these moments into opportunities for heartfelt and genuine communication. From personalized anecdotes to sharing memories and highlighting the unique qualities of the recipient, there are countless ways to create messages that truly resonate with those you care about. Embracing creativity and authenticity, you can turn each occasion into a chance to strengthen your connections and bring joy to the people who matter most in your life.
               </p>
               <div class="text-center text-lg-start">
-                <a href="https://play.google.com/store/apps/details?id=com.cacaoapps.greetextai" target="_blank" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
+                <a href="#" onclick="downloadApp()" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
                   <span>Download Now</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -228,7 +187,7 @@
                 When it comes to crafting the perfect wishing text for your recipient, the tone and style of voice you choose can make all the difference in how your message is received. Our range of options allows you to tailor your message in a way that truly resonates with the individual you're addressing. Whether you want to infuse your message with humor to bring a smile to their face, maintain a casual and friendly tone to convey warmth and approachability, adopt a formal style to express respect and professionalism, or delve into romantic expressions to convey deep emotions, having these choices at your disposal empowers you to create a customized and impactful message for any occasion.
               </p>
               <div class="text-center text-lg-start">
-                <a href="https://play.google.com/store/apps/details?id=com.cacaoapps.greetextai" target="_blank" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
+                <a href="#" onclick="downloadApp()" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
                   <span>Download Now</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -315,7 +274,7 @@
             </div>
 
 			<div class="text-center text-lg-center" data-aos="fade-up" data-aos-delay="600">
-				<a href="https://play.google.com/store/apps/details?id=com.cacaoapps.greetextai" target="_blank" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
+				<a href="#" onclick="downloadApp()" class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
 				<span>Download Now</span>
 				<i class="bi bi-arrow-right"></i>
 				</a>
