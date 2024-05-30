@@ -29,8 +29,8 @@ function downloadApp() {
 		};
 		var iframe = document.createElement('iframe');
 		iframe.src = 'app/';
-		iframe.style.width = '45vh';
-		iframe.style.height = '80vh';
+		iframe.style.width = '50vh';
+		iframe.style.height = '90vh';
 		iframe.style.border = 'none';
 		popup.appendChild(iframe);
 		document.body.appendChild(popup);
