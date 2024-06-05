@@ -62,25 +62,53 @@
 <body>
 
 	<!-- ======= Header ======= -->
-	<header id="header" class="header fixed-top">
-		<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+	<header id="header" class="fixed-top">
+		<div class="header">
+			<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+	
+				<a href="/" class="logo d-flex align-items-center">
+					<img src="assets/img/logo_white.png" alt="Logo in white">
+				</a>
+	
+				<nav id="navbar" class="navbar">
+					<ul>
+						<li><a class="nav-link scrollto" href="/#hero">Home</a></li>
+						<li><a class="nav-link scrollto" href="/#benefits">Benefits</a></li>
+						<li><a class="nav-link scrollto" href="/#features">Features</a></li>
+						<li><a class="nav-link scrollto active" href="/blog.html">Blog</a></li>
+	
+						<li><a class="getstarted scrollto" href="#" onclick="downloadApp()">Download Now</a></li>
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav><!-- .navbar -->
+	
+			</div>
+		</div>
 
-			<a href="/" class="logo d-flex align-items-center">
-				<img src="assets/img/logo_white.png" alt="Logo in white">
-			</a>
-
-			<nav id="navbar" class="navbar">
-				<ul>
-					<li><a class="nav-link scrollto" href="/">Home</a></li>
-					<li><a class="nav-link scrollto" href="/#benefits">Benefits</a></li>
-					<li><a class="nav-link scrollto" href="/#features">Features</a></li>
-					<li><a class="nav-link scrollto active" href="blog.html">Blog</a></li>
-
-					<li><a class="getstarted scrollto" href="#" onclick="downloadApp()">Download Now</a></li>
-				</ul>
-				<i class="bi bi-list mobile-nav-toggle"></i>
-			</nav><!-- .navbar -->
-
+		<div id="floating-banner" class="d-none d-md-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-10">
+			
+					</div>
+					<div class="col-sm-2">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
+							crossorigin="anonymous"></script>
+						<!-- Side banner -->
+						<ins class="adsbygoogle"
+							style="display:block"
+							data-ad-client="ca-pub-4433921005109890"
+							data-adtest="on"
+							data-ad-slot="1150554585"
+							data-ad-format="auto"
+							data-full-width-responsive="true"></ins>
+						<script>
+							google_adtest = on;
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header><!-- End Header -->
 
@@ -99,13 +127,33 @@
 			</div>
 		</section><!-- End Breadcrumbs -->
 
+		<!-- ======= Fixed Mobile Banner ======= -->
+		<div id="floating-banner" class="d-block d-md-none">
+			<div class="container">
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
+					crossorigin="anonymous"></script>
+				<!-- Side banner -->
+				<ins class="adsbygoogle"
+					style="display:block"
+					data-ad-client="ca-pub-4433921005109890"
+					data-adtest="on"
+					data-ad-slot="1150554585"
+					data-ad-format="auto"
+					data-full-width-responsive="true"></ins>
+				<script>
+					google_adtest = on;
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div><!-- End Fixed Mobile Banner -->
+
 		<!-- ======= Blog Single Section ======= -->
 		<section id="blog" class="blog">
 			<div class="container" data-aos="fade-up">
 
 				<div class="row">
 
-					<div class="entries">
+					<div class="entries col-md-10">
 
 						<article class="entry entry-single">
 
