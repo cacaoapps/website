@@ -1,11 +1,11 @@
 const firebaseConfig = {
-	apiKey: "AIzaSyAN25aOeZ8HcVxjhh1fBjwgnTez7flBFEk",
+	apiKey: "AIzaSyCQ9DwGZjvfvOJCTVSfaOs4Al0sSCL34hM",
 	authDomain: "cookai-2e844.firebaseapp.com",
 	projectId: "cookai-2e844",
 	storageBucket: "cookai-2e844.firebasestorage.app",
 	messagingSenderId: "475665303036",
-	appId: "1:475665303036:web:3e814a81bfc882675cde79",
-	measurementId: "G-H9YP52HMH2",
+	appId: "1:475665303036:web:73e30fd9d7266a515cde79",
+	measurementId: "G-JXP4Y549SR",
 };
 
 firebase.initializeApp(firebaseConfig);
