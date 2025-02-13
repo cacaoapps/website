@@ -70,7 +70,8 @@ async function generateHashedId() {
 	console.log("IP:", ip);
 	const deviceDetails = getDeviceDetails();
 	console.log("Device Details:", deviceDetails);
-	const dataToHash = `${ip}-${JSON.stringify(deviceDetails)}`; // Combine for hashing
+	const dataToHash = `${ip}-${deviceDetails.os}-${deviceDetails.osVersion}-${deviceDetails.screenWidth}-${deviceDetails.screenHeight}-${deviceDetails.timezone}-${deviceDetails.timezoneOffset}`; // Combine for hashing
+	console.log("Data to Hash:", dataToHash);
 
 	// Simple hash function (replace with a more robust one if needed)
 	const encoder = new TextEncoder();
