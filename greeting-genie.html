@@ -1,250 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<title>GreetextAI: Your Year-Round Greeting Genie</title>
+		<meta content="GreetextAI is here to be your personal greeting genie –  365 days a year!" name="description" />
+		<meta content="" name="keywords" />
+		<link rel="canonical" href="https://greetextai.com/greeting-genie.html" />
 
-	<title>GreetextAI: Your Year-Round Greeting Genie</title>
-	<meta
-		content="GreetextAI is here to be your personal greeting genie –  365 days a year!"
-		name="description">
-	<meta content="" name="keywords">
-	<link rel="canonical" href="https://greetextai.com/greeting-genie.html">
+		<!-- Favicons -->
+		<link href="assets/img/favicon-new.png" rel="icon" />
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-	<!-- Favicons -->
-	<link href="assets/img/favicon-new.png" rel="icon">
-	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
 
-	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
+		<!-- Vendor CSS Files -->
+		<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+		<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+		<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+		<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+		<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-	<!-- Vendor CSS Files -->
-	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<!-- Template Main CSS File -->
+		<link href="assets/css/style.css" rel="stylesheet" />
 
-	<!-- Template Main CSS File -->
-	<link href="assets/css/style.css" rel="stylesheet">
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZCVFLZTJ3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZCVFLZTJ3"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+			gtag("config", "G-HZCVFLZTJ3");
+		</script>
+		<script type="text/javascript">
+			window.smartlook ||
+				(function (d) {
+					var o = (smartlook = function () {
+							o.api.push(arguments);
+						}),
+						h = d.getElementsByTagName("head")[0];
+					var c = d.createElement("script");
+					o.api = new Array();
+					c.async = true;
+					c.type = "text/javascript";
+					c.charset = "utf-8";
+					c.src = "https://web-sdk.smartlook.com/recorder.js";
+					h.appendChild(c);
+				})(document);
+			smartlook("init", "4a1753c6c6d5c283f61de5ff875ad569db08de88", { region: "eu" });
+		</script>
 
-		gtag('config', 'G-HZCVFLZTJ3');
-	</script>
-	<script type='text/javascript'>
-		window.smartlook || (function (d) {
-			var o = smartlook = function () { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
-			var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
-			c.charset = 'utf-8'; c.src = 'https://web-sdk.smartlook.com/recorder.js'; h.appendChild(c);
-		})(document);
-		smartlook('init', '4a1753c6c6d5c283f61de5ff875ad569db08de88', { region: 'eu' });
-	</script>
-
-	<!-- =======================================================
+		<!-- =======================================================
   * Template Name: FlexStart
   * Updated: Jan 29 2024 with Bootstrap v5.3.2
   * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+	</head>
 
-<body>
+	<body>
+		<!-- ======= Header ======= -->
+		<header id="header" class="fixed-top">
+			<div class="header">
+				<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+					<a href="/" class="logo d-flex align-items-center">
+						<img src="assets/img/logo_white.png" alt="Logo in white" />
+					</a>
 
-	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top">
-		<div class="header">
-			<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-	
-				<a href="/" class="logo d-flex align-items-center">
-					<img src="assets/img/logo_white.png" alt="Logo in white">
-				</a>
-	
-				<nav id="navbar" class="navbar">
-					<ul>
-						<li><a class="nav-link scrollto" href="index.html">Greetext Wishes AI</a></li>
-						<li><a class="nav-link scrollto" href="textuneai.html">Textune AI</a></li>
-						<li><a class="nav-link scrollto" href="cookai.html">CookAI</a></li>
-						<!-- <li><a class="nav-link scrollto" href="#benefits">Benefits</a></li>
+					<nav id="navbar" class="navbar">
+						<ul>
+							<li><a class="nav-link scrollto" href="index.html">Greetext Wishes AI</a></li>
+							<li><a class="nav-link scrollto" href="textuneai.html">Textune AI</a></li>
+							<li><a class="nav-link scrollto" href="cookai.html">CookAI</a></li>
+							<!-- <li><a class="nav-link scrollto" href="#benefits">Benefits</a></li>
 						<li><a class="nav-link scrollto" href="#features">Features</a></li> -->
-						<li><a class="nav-link scrollto active" href="blog.html">Blog</a></li>
-	
-						<!-- <li><a class="getstarted scrollto" href="#" onclick="downloadApp()">Download Now</a></li> -->
-					</ul>
-					<i class="bi bi-list mobile-nav-toggle"></i>
-				</nav><!-- .navbar -->
-	
-			</div>
-		</div>
+							<li><a class="nav-link scrollto active" href="blog.html">Blog</a></li>
 
-		<div id="floating-banner" class="d-none d-md-block">
-			<div class="container">
-				<div class="row justify-content-end" style="height: 0px;">
-					<div class="col-sm-2">
-						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
-							crossorigin="anonymous"></script>
-						<!-- Side banner -->
-						<ins class="adsbygoogle"
-							style="display:block"
-							data-ad-client="ca-pub-4433921005109890"
-							data-adtest="on"
-							data-ad-slot="1150554585"
-							data-ad-format="auto"
-							data-full-width-responsive="true"></ins>
-						<script>
-							google_adtest = on;
-							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
+							<!-- <li><a class="getstarted scrollto" href="#" onclick="downloadApp()">Download Now</a></li> -->
+						</ul>
+						<i class="bi bi-list mobile-nav-toggle"></i>
+					</nav>
+					<!-- .navbar -->
+				</div>
+			</div>
+
+			<div id="floating-banner" class="d-none d-md-block">
+				<div class="container">
+					<div class="row justify-content-end" style="height: 0px">
+						<div class="col-sm-2">
+							<script
+								async
+								src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
+								crossorigin="anonymous"
+							></script>
+							<!-- Side banner -->
+							<ins
+								class="adsbygoogle"
+								style="display: block"
+								data-ad-client="ca-pub-4433921005109890"
+								data-adtest="on"
+								data-ad-slot="1150554585"
+								data-ad-format="auto"
+								data-full-width-responsive="true"
+							></ins>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header><!-- End Header -->
+		</header>
+		<!-- End Header -->
 
-	<main id="main">
+		<main id="main">
+			<!-- ======= Breadcrumbs ======= -->
+			<section class="breadcrumbs">
+				<div class="container">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li>GreetextAI: Your Year-Round Greeting Genie</li>
+					</ol>
+				</div>
+			</section>
+			<!-- End Breadcrumbs -->
 
-		<!-- ======= Breadcrumbs ======= -->
-		<section class="breadcrumbs">
+			<!-- ======= Fixed Mobile Banner ======= -->
+			<div id="floating-banner" class="d-block d-md-none">
+				<div class="container">
+					<script
+						async
+						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
+						crossorigin="anonymous"
+					></script>
+					<!-- Side banner -->
+					<ins
+						class="adsbygoogle"
+						style="display: block"
+						data-ad-client="ca-pub-4433921005109890"
+						data-adtest="on"
+						data-ad-slot="1150554585"
+						data-ad-format="auto"
+						data-full-width-responsive="true"
+					></ins>
+				</div>
+			</div>
+			<!-- End Fixed Mobile Banner -->
+
+			<!-- ======= Blog Single Section ======= -->
+			<section id="blog" class="blog">
+				<div class="container" data-aos="fade-up">
+					<div class="row">
+						<div class="entries col-md-10">
+							<article class="entry entry-single">
+								<h1 class="entry-title">GreetextAI: Your Year-Round Greeting Genie</h1>
+
+								<div class="entry-img">
+									<img src="assets/img/blog/greeting-genie.jpg" alt="AI text" class="img-fluid" />
+								</div>
+
+								<div class="entry-img-credits">
+									<p>
+										Photo by
+										<a
+											href="https://unsplash.com/@steve_j?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash"
+											previewlistener="true"
+											target="_blank"
+											>Steve Johnson</a
+										>
+										on
+										<a
+											href="https://unsplash.com/photos/the-letters-are-made-up-of-different-colors-1FD-E7Ioblw?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash"
+											previewlistener="true"
+											target="_blank"
+											>Unsplash</a
+										>
+									</p>
+								</div>
+
+								<div class="entry-content">
+									<p>
+										Ever scrambled at the last minute to write a heartfelt birthday message to your
+										grandma, only to come up with a dry "Happy Birthday!" that sounds like it came
+										from a dusty hallmark card? Or maybe you wanted to send a hilarious Easter
+										greeting to your cousin but your funny bone was mysteriously missing. Well, fret
+										no more, because GreetextAI is here to be your personal greeting genie – 365
+										days a year!
+									</p>
+									<p>
+										This nifty app acts like your own personal writing assistant, whipping up
+										customized text wishes for all sorts of occasions. From the classic holidays
+										like Christmas and Thanksgiving to the more unexpected ones like Halloween
+										(because who doesn't want a spooky good time?), GreetextAI has you covered.
+									</p>
+									<p>
+										But wait, there's more! This isn't just a one-size-fits-all greeting machine.
+										GreetextAI lets you personalize your wishes to fit the recipient perfectly.
+										Think of it like a choose-your-own-adventure for greetings. Need a short and
+										sweet message for your coworker's birthday? No problem. Want to write a sonnet
+										to your significant other for Valentine's Day? GreetextAI can crank that out
+										too.
+									</p>
+									<p>
+										Here's a sneak peek at how GreetextAI can be your greeting hero throughout the
+										year:
+									</p>
+									<h2>Seasonal Greetings: From Chilly Winter to Sun-Soaked Summer</h2>
+									<ul>
+										<li>
+											<strong>Winter Wonderland:</strong> Deck the halls with boughs of holly –
+											and greetings generated by GreetextAI! Craft heartwarming messages for
+											Christmas that mention your favorite family traditions or funny memories.
+											Need a Hanukkah greeting that's full of light and laughter? GreetextAI can
+											do that too. Don't forget those New Year's resolutions – send encouraging
+											messages to your loved ones to help them kick-off the year on the right
+											foot.
+										</li>
+										<li>
+											<strong>Spring Fling:</strong> Spring is a time for renewal and fresh
+											starts. Birthdays are aplenty during this season, so use GreetextAI to send
+											personalized messages that acknowledge their new age (or cleverly avoid it
+											altogether) – after all, age is just a number, right? For graduations, craft
+											messages brimming with pride and future possibilities.
+										</li>
+										<li>
+											<strong>Summer Lovin':</strong> School's out, the sun is shining, and it's
+											the perfect time to celebrate! Fourth of July barbeques become even more
+											festive with personalized greetings. Anniversaries are a big deal in the
+											summer – wow your partner with a romantic message penned by GreetextAI (but
+											don't forget the flowers!).
+										</li>
+										<li>
+											<strong>Fall Fun:</strong> As the leaves start to change color, use
+											GreetextAI to send spooky greetings for Halloween that are both funny and
+											frightful. Thanksgiving is all about expressing gratitude, so let GreetextAI
+											help you craft messages that show your loved ones just how much you
+											appreciate them.
+										</li>
+									</ul>
+									<h2>Beyond the Seasons: Greetings for Every Occasion</h2>
+									<p>
+										But GreetextAI isn't just a seasonal superhero. Think of a random occasion – a
+										work promotion, a housewarming party, even a "just because" moment – GreetextAI
+										can whip up a thoughtful message to show you care.
+									</p>
+									<h2>Beyond the Words: Choosing the Perfect Tone</h2>
+									<p>
+										Finding the right tone for your greeting can be tricky. Do you want something
+										funny and lighthearted for your best friend? Or maybe something more formal and
+										respectful for your boss? GreetextAI lets you choose the perfect tone to match
+										the recipient and the occasion.
+									</p>
+									<p>
+										So ditch the writer's block and unleash the greeting genie within! GreetextAI is
+										here to save you from generic greetings and help you craft messages that are as
+										unique as the people you love.
+									</p>
+									<p>
+										P.S. Still not convinced? Imagine the look on your grandma's face when she
+										receives a birthday message that mentions her famous chocolate chip cookies (and
+										her secret ingredient!). GreetextAI – it's the gift that keeps on giving, all
+										year round.
+									</p>
+								</div>
+							</article>
+							<!-- End blog entry -->
+						</div>
+						<!-- End blog entries list -->
+					</div>
+				</div>
+			</section>
+			<!-- End Blog Single Section -->
+		</main>
+		<!-- End #main -->
+
+		<!-- ======= Footer ======= -->
+		<footer id="footer" class="footer">
 			<div class="container">
-
-				<ol>
-					<li><a href="/">Home</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li>GreetextAI: Your Year-Round Greeting Genie</li>
-				</ol>
-
-			</div>
-		</section><!-- End Breadcrumbs -->
-
-		<!-- ======= Fixed Mobile Banner ======= -->
-		<div id="floating-banner" class="d-block d-md-none">
-			<div class="container">
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
-					crossorigin="anonymous"></script>
-				<!-- Side banner -->
-				<ins class="adsbygoogle"
-					style="display:block"
-					data-ad-client="ca-pub-4433921005109890"
-					data-adtest="on"
-					data-ad-slot="1150554585"
-					data-ad-format="auto"
-					data-full-width-responsive="true"></ins>
-				<script>
-					google_adtest = on;
-					(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div>
-		</div><!-- End Fixed Mobile Banner -->
-
-		<!-- ======= Blog Single Section ======= -->
-		<section id="blog" class="blog">
-			<div class="container" data-aos="fade-up">
-
-				<div class="row">
-
-					<div class="entries col-md-10">
-
-						<article class="entry entry-single">
-
-							<h1 class="entry-title">
-								GreetextAI: Your Year-Round Greeting Genie
-							</h1>
-
-							<div class="entry-img">
-								<img src="assets/img/blog/greeting-genie.jpg" alt="AI text" class="img-fluid">
-							</div>
-
-							<div class="entry-img-credits">
-								<p>Photo by <a
-										href="https://unsplash.com/@steve_j?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash"
-										previewlistener="true" target="_blank">Steve Johnson</a> on <a
-										href="https://unsplash.com/photos/the-letters-are-made-up-of-different-colors-1FD-E7Ioblw?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash"
-										previewlistener="true" target="_blank">Unsplash</a></p>
-							</div>
-
-							<div class="entry-content">
-								<p>Ever scrambled at the last minute to write a heartfelt birthday message to your grandma, only to come up with a dry "Happy Birthday!" that sounds like it came from a dusty hallmark card? Or maybe you wanted to send a hilarious Easter greeting to your cousin but your funny bone was mysteriously missing. Well, fret no more, because GreetextAI is here to be your personal greeting genie –  365 days a year!</p>
-								<p>This nifty app acts like your own personal writing assistant, whipping up customized text wishes for all sorts of occasions. From the classic holidays like Christmas and Thanksgiving to the more unexpected ones like Halloween (because who doesn't want a spooky good time?), GreetextAI has you covered.</p>
-								<p>But wait, there's more!  This isn't just a one-size-fits-all greeting machine. GreetextAI lets you personalize your wishes to fit the recipient perfectly.  Think of it like a choose-your-own-adventure for greetings.  Need a short and sweet message for your coworker's birthday? No problem. Want to write a sonnet to your significant other for Valentine's Day? GreetextAI can crank that out too.</p>
-								<p>Here's a sneak peek at how GreetextAI can be your greeting hero throughout the year:</p>
-								<h2>Seasonal Greetings: From Chilly Winter to Sun-Soaked Summer</h2>
-								<ul>
-									<li><strong>Winter Wonderland:</strong>  Deck the halls with boughs of holly – and greetings generated by GreetextAI!  Craft heartwarming messages for Christmas that  mention your favorite family traditions or funny memories.  Need a Hanukkah greeting that's full of light and laughter? GreetextAI can do that too. Don't forget those New Year's resolutions – send encouraging messages to your loved ones to help them kick-off the year on the right foot.</li>
-									<li><strong>Spring Fling:</strong> Spring is a time for renewal and fresh starts. Birthdays are aplenty during this season, so use GreetextAI to send personalized messages that acknowledge their new age (or cleverly avoid it altogether)  –  after all, age is just a number, right?  For graduations, craft messages brimming with pride and future possibilities.</li>
-									<li><strong>Summer Lovin':</strong>  School's out, the sun is shining, and it's the perfect time to celebrate!  Fourth of July barbeques become even more festive with personalized greetings.  Anniversaries are a big deal in the summer –  wow your partner with a romantic message penned by GreetextAI (but don't forget the flowers!).</li>
-									<li><strong>Fall Fun:</strong>  As the leaves start to change color, use GreetextAI to send spooky greetings for Halloween that are both funny and frightful. Thanksgiving is all about expressing gratitude, so let GreetextAI help you craft messages that show your loved ones just how much you appreciate them.</li>
-								</ul>
-								<h2>Beyond the Seasons: Greetings for Every Occasion</h2>
-								<p>But GreetextAI isn't just a seasonal superhero.  Think of a random occasion – a work promotion, a housewarming party, even a "just because" moment – GreetextAI can whip up a thoughtful message to show you care.</p>
-								<h2>Beyond the Words: Choosing the Perfect Tone</h2>
-								<p>Finding the right tone for your greeting can be tricky.  Do you want something funny and lighthearted for your best friend?  Or maybe something more formal and respectful for your boss?  GreetextAI lets you choose the perfect tone to match the recipient and the occasion.</p>
-								<p>So ditch the writer's block and unleash the greeting genie within!  GreetextAI is here to save you from generic greetings and help you craft messages that are as unique as the people you love.</p>
-								<p>P.S.  Still not convinced?  Imagine the look on your grandma's face when she receives a birthday message that mentions her famous chocolate chip cookies (and her secret ingredient!).  GreetextAI – it's the gift that keeps on giving, all year round.</p>
-							</div>
-
-						</article><!-- End blog entry -->
-
-					</div><!-- End blog entries list -->
-
+				<div class="copyright">
+					<div>
+						<a href="terms.html">Terms & Conditions</a>
+					</div>
+					<div>
+						<a href="privacy.html">Privacy Policy</a>
+					</div>
+					<div>
+						<a href="mailto:support@greetextai.com" target="_blank">Contact Us</a>
+					</div>
+					&copy; Copyright 2024 <strong><span>Greetext AI</span></strong
+					>. All Rights Reserved
 				</div>
-
-			</div>
-		</section><!-- End Blog Single Section -->
-
-	</main><!-- End #main -->
-
-	<!-- ======= Footer ======= -->
-	<footer id="footer" class="footer">
-
-		<div class="container">
-			<div class="copyright">
-				<div>
-					<a href="terms.html">Terms & Conditions</a>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
 				</div>
-				<div>
-					<a href="privacy.html">Privacy Policy</a>
-				</div>
-				<div>
-					<a href="mailto:support@greetextai.com" target="_blank">Contact Us</a>
-				</div>
-				&copy; Copyright 2024 <strong><span>Greetext AI</span></strong>. All Rights Reserved
 			</div>
-			<div class="credits">
-				<!-- All the links in the footer should remain intact. -->
-				<!-- You can delete the links only if you purchased the pro version. -->
-				<!-- Licensing information: https://bootstrapmade.com/license/ -->
-				<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-			</div>
-		</div>
-	</footer><!-- End Footer -->
+		</footer>
+		<!-- End Footer -->
 
-	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-			class="bi bi-arrow-up-short"></i></a>
+		<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+			><i class="bi bi-arrow-up-short"></i
+		></a>
 
-	<!-- Vendor JS Files -->
-	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-	<script src="assets/vendor/aos/aos.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="assets/vendor/php-email-form/validate.js"></script>
+		<!-- Vendor JS Files -->
+		<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+		<script src="assets/vendor/aos/aos.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+		<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+		<script src="assets/vendor/php-email-form/validate.js"></script>
 
-	<!-- Template Main JS File -->
-	<script src="assets/js/main.js"></script>
-  <script src="assets/js/utils.js"></script>
-
-</body>
-
+		<!-- Template Main JS File -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/utils.js"></script>
+	</body>
 </html>
