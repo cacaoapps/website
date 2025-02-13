@@ -81,7 +81,7 @@ async function generateHashedId() {
 
 	// Convert the hash to Base64
 	const hashArray = Array.from(new Uint8Array(hashBuffer));
-	const base64Hash = btoa(String.fromCharCode(...hashArray));
+	const base64Hash = btoa(String.fromCharCode(...hashArray)).replace(/\//g, "_");
 
 	console.log("Hashed ID:", base64Hash);
 	return base64Hash;
