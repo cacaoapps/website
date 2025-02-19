@@ -1,118 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<title>Greetext CookAI: AI Recipe Generator</title>
 
-	<title>Greetext CookAI: AI Recipe Generator</title>
+		<meta
+			content="Unleash your inner chef with CookAI! Create delicious, personalized recipes in seconds, no matter your skill level"
+			name="description"
+		/>
+		<meta content="" name="keywords" />
+		<link rel="canonical" href="https://greetextai.com/cookai.html" />
+		<!-- Favicons -->
+		<link href="assets/img/cookai-favicon.png" rel="icon" />
+		<link href="assets/img/cookai-apple-touch-icon.png" rel="apple-touch-icon" />
 
-	<meta
-		content="Unleash your inner chef with CookAI! Create delicious, personalized recipes in seconds, no matter your skill level"
-		name="description">
-	<meta content="" name="keywords">
-	<link rel="canonical" href="https://greetextai.com/cookai.html">
-	<!-- Favicons -->
-	<link href="assets/img/cookai-favicon.png" rel="icon">
-	<link href="assets/img/cookai-apple-touch-icon.png" rel="apple-touch-icon">
+		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+		<script defer src="assets/js/referral.js"></script>
 
-	<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-	<script defer src="assets/js/referral.js"></script> 
+		<!-- Open graph tags -->
+		<meta property="og:title" content="Greetext CookAI: AI Recipe Generator" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://greetextai.com/cookai.html" />
+		<meta property="og:image" content="assets/img/cookai_hero.png" />
+		<meta
+			property="og:description"
+			content="Unleash your inner chef with CookAI! Create delicious, personalized recipes in seconds, no matter your skill level."
+		/>
+		<meta property="og:site_name" content="Greetext CookAI" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 
-	<!-- Open graph tags -->
-	<meta property="og:title" content="Greetext CookAI: AI Recipe Generator">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://greetextai.com/cookai.html">
-	<meta property="og:image" content="assets/img/cookai_hero.png">
-	<meta property="og:description"
-		content="Unleash your inner chef with CookAI! Create delicious, personalized recipes in seconds, no matter your skill level.">
-	<meta property="og:site_name" content="Greetext CookAI">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
+		<!-- Twitter Card tags -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Greetext CookAI: AI Recipe Generator" />
+		<meta
+			name="twitter:description"
+			content="Unleash your inner chef with CookAI! Create delicious, personalized recipes in seconds, no matter your skill level."
+		/>
+		<meta name="twitter:image" content="assets/img/cookai_hero.png" />
 
-	<!-- Twitter Card tags -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Greetext CookAI: AI Recipe Generator">
-	<meta name="twitter:description"
-		content="Unleash your inner chef with CookAI! Create delicious, personalized recipes in seconds, no matter your skill level.">
-	<meta name="twitter:image" content="assets/img/cookai_hero.png">
+		<meta name="apple-itunes-app" content="app-id=6739759101" />
 
-	<meta name="apple-itunes-app" content="app-id=6739759101" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
 
-	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
+		<!-- Vendor CSS Files -->
+		<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+		<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+		<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+		<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+		<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-	<!-- Vendor CSS Files -->
-	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<!-- Template Main CSS File -->
+		<link href="assets/css/style.css" rel="stylesheet" />
 
-	<!-- Template Main CSS File -->
-	<link href="assets/css/style.css" rel="stylesheet">
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZCVFLZTJ3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZCVFLZTJ3"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+			gtag("config", "G-HZCVFLZTJ3");
+		</script>
+		<script type="text/javascript">
+			window.smartlook ||
+				(function (d) {
+					var o = (smartlook = function () {
+							o.api.push(arguments);
+						}),
+						h = d.getElementsByTagName("head")[0];
+					var c = d.createElement("script");
+					o.api = new Array();
+					c.async = true;
+					c.type = "text/javascript";
+					c.charset = "utf-8";
+					c.src = "https://web-sdk.smartlook.com/recorder.js";
+					h.appendChild(c);
+				})(document);
+			smartlook("init", "4a1753c6c6d5c283f61de5ff875ad569db08de88", { region: "eu" });
+		</script>
 
-		gtag('config', 'G-HZCVFLZTJ3');
-	</script>
-	<script type='text/javascript'>
-		window.smartlook || (function (d) {
-			var o = smartlook = function () { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
-			var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
-			c.charset = 'utf-8'; c.src = 'https://web-sdk.smartlook.com/recorder.js'; h.appendChild(c);
-		})(document);
-		smartlook('init', '4a1753c6c6d5c283f61de5ff875ad569db08de88', { region: 'eu' });
-	</script>
+		<style>
+			/* Smart App Banner Styles */
+			#smart-banner {
+				display: none; /* Hidden by default */
+				top: 0;
+				left: 0;
+				width: 100%;
+				background-color: #f8f8f8;
+				border-bottom: 1px solid #ccc;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+				z-index: 1000;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			}
+			#smart-banner .sb-container {
+				display: flex;
+				align-items: center;
+				padding: 10px;
+				max-width: 768px;
+				margin: 0 auto;
+			}
+			#smart-banner .sb-icon {
+				flex: 0 0 auto;
+				width: 60px;
+				height: 60px;
+				background: url("assets/img/cookai-apple-touch-icon.png") no-repeat center center / cover;
+				border-radius: 12px;
+				margin-right: 10px;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			}
+			#smart-banner .sb-info {
+				flex: 1 1 auto;
+				display: flex;
+				flex-direction: column;
+			}
+			#smart-banner .sb-info strong {
+				font-size: 16px;
+				color: #333;
+			}
+			#smart-banner .sb-info span {
+				font-size: 12px;
+				color: #666;
+			}
+			#smart-banner .sb-buttons {
+				flex: 0 0 auto;
+				display: flex;
+				align-items: center;
+			}
+			#smart-banner .sb-buttons a {
+				background-color: #007aff;
+				color: #fff;
+				padding: 8px 12px;
+				border-radius: 5px;
+				text-decoration: none;
+				font-size: 14px;
+				margin-right: 10px;
+			}
+			#smart-banner .sb-buttons a:hover {
+				background-color: #0051c7;
+			}
+			#smart-banner .sb-buttons button {
+				background: none;
+				border: none;
+				font-size: 20px;
+				color: #999;
+				cursor: pointer;
+			}
+		</style>
 
-	<!-- =======================================================
+		<!-- =======================================================
   * Template Name: FlexStart
   * Updated: Jan 29 2024 with Bootstrap v5.3.2
   * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+	</head>
 
-<body class="cookai">
-
-	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top">
-		<div class="header">
-			<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-	
-				<a href="/cookai.html" class="logo d-flex align-items-center">
-					<img src="assets/img/cookai_logo_white.png" alt="Logo in white">
-				</a>
-	
-				<nav id="navbar" class="navbar">
-					<ul>
-						<li><a class="nav-link scrollto" href="index.html">Greetext Wishes AI</a></li>
-						<li><a class="nav-link scrollto" href="textuneai.html">Textune AI</a></li>
-						<li><a class="nav-link scrollto active" href="cookai.html">CookAI</a></li>
-						<!-- <li><a class="nav-link scrollto" href="#benefits">Benefits</a></li>
-						<li><a class="nav-link scrollto" href="#features">Features</a></li> -->
-						<li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
-	
-						<!-- <li><a class="getstarted scrollto" href="#" onclick="downloadApp()">Download Now</a></li> -->
-					</ul>
-					<i class="bi bi-list mobile-nav-toggle"></i>
-				</nav><!-- .navbar -->
-	
+	<body class="cookai">
+		<!-- ======= Header ======= -->
+		<header id="header" class="fixed-top">
+			<div id="smart-banner">
+				<div class="sb-container">
+					<div class="sb-icon"></div>
+					<div class="sb-info">
+						<strong>CookAI</strong>
+						<span>Enhance your cooking experience with AI-powered recipes.</span>
+					</div>
+					<div class="sb-buttons">
+						<a href="https://play.google.com/store/apps/details?id=com.cacaoapps.cookai">Install</a>
+						<button onclick="closeBanner()">×</button>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<!-- <div id="floating-banner" class="d-none d-md-block">
+			<script>
+				// Function to close the banner
+				function closeBanner() {
+					document.getElementById("smart-banner").style.display = "none";
+				}
+
+				// Show the banner only on Android devices
+				if (/Android/i.test(navigator.userAgent)) {
+					document.getElementById("smart-banner").style.display = "block";
+					// Adjust body padding to prevent content overlap
+					document.body.style.paddingTop = "80px";
+				}
+			</script>
+			<div class="header">
+				<div class="container-fluid container-xl d-flex flex-column">
+					<div class="d-flex align-items-center justify-content-between">
+						<a href="/cookai.html" class="logo d-flex align-items-center">
+							<img src="assets/img/cookai_logo_white.png" alt="Logo in white" />
+						</a>
+
+						<nav id="navbar" class="navbar">
+							<ul>
+								<li><a class="nav-link scrollto" href="index.html">Greetext Wishes AI</a></li>
+								<li><a class="nav-link scrollto" href="textuneai.html">Textune AI</a></li>
+								<li><a class="nav-link scrollto active" href="cookai.html">CookAI</a></li>
+								<!-- <li><a class="nav-link scrollto" href="#benefits">Benefits</a></li>
+								<li><a class="nav-link scrollto" href="#features">Features</a></li> -->
+								<li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
+
+								<!-- <li><a class="getstarted scrollto" href="#" onclick="downloadApp()">Download Now</a></li> -->
+							</ul>
+							<i class="bi bi-list mobile-nav-toggle"></i>
+						</nav>
+						<!-- .navbar -->
+					</div>
+				</div>
+			</div>
+
+			<!-- <div id="floating-banner" class="d-none d-md-block">
 			<div class="container">
 				<div class="row justify-content-end" style="height: 0px;">
 					<div class="col-sm-2">
@@ -129,362 +240,452 @@
 				</div>
 			</div>
 		</div> -->
-	</header><!-- End Header -->
+		</header>
+		<!-- End Header -->
 
-
-	<!-- ======= Hero Section ======= -->
-	<section id="hero" class="hero d-flex align-items-center">
-
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 d-flex flex-column justify-content-center">
-					<h1 data-aos="fade-up">Your Personal AI Chef</h1>
-					<h2 data-aos="fade-up">Discover Delicious Recipe Ideas Tailored to You.</h2>
-					<h2 data-aos="fade-up">CookAI is the AI meal planner and recipe generator that simplifies cooking.</h2>
-					<h2 data-aos="fade-up">From quick weeknight dinners to elaborate holiday feasts, find custom recipes based on your dietary restrictions, favorite cuisines, and available ingredients. Start cooking smarter today!</h2>
-					<div class="row text-center text-lg-start" data-aos="fade-up">
-						<div class="col-lg-5">
-							<a href="https://apps.apple.com/app/cookai-ai-recipe-generator/id6739759101?itsct=apps_box_badge&amp;itscg=30200"
-								target="_blank" rel="noopener noreferrer"
-								style="display: inline-block; "
-								previewlistener="true"><img
-									src="assets/img/appstore.png"
-									alt="Download on the App Store">
-							</a>
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="hero d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 d-flex flex-column justify-content-center">
+						<h1 data-aos="fade-up">Your Personal AI Chef</h1>
+						<h2 data-aos="fade-up">Discover Delicious Recipe Ideas Tailored to You.</h2>
+						<h2 data-aos="fade-up">
+							CookAI is the AI meal planner and recipe generator that simplifies cooking.
+						</h2>
+						<h2 data-aos="fade-up">
+							From quick weeknight dinners to elaborate holiday feasts, find custom recipes based on your
+							dietary restrictions, favorite cuisines, and available ingredients. Start cooking smarter
+							today!
+						</h2>
+						<div class="row text-center text-lg-start" data-aos="fade-up">
+							<div class="col-lg-5">
+								<a
+									href="https://apps.apple.com/app/cookai-ai-recipe-generator/id6739759101?itsct=apps_box_badge&amp;itscg=30200"
+									target="_blank"
+									rel="noopener noreferrer"
+									style="display: inline-block"
+									previewlistener="true"
+									><img src="assets/img/appstore.png" alt="Download on the App Store" />
+								</a>
+							</div>
+							<div class="col-lg-5">
+								<a
+									href="https://play.google.com/store/apps/details?id=com.cacaoapps.cookai"
+									target="_blank"
+									rel="noopener noreferrer"
+									style="display: inline-block"
+									previewlistener="true"
+									><img src="assets/img/googleplay.png" alt="Download on the App Store" />
+								</a>
+							</div>
 						</div>
-						<div class="col-lg-5">
-							<a href="https://play.google.com/store/apps/details?id=com.cacaoapps.cookai"
-								target="_blank" rel="noopener noreferrer"
-								style="display: inline-block; "
-								previewlistener="true"><img
-									src="assets/img/googleplay.png"
-									alt="Download on the App Store">
-							</a>
+					</div>
+					<div class="col-lg-5 hero-img" data-aos="zoom-out">
+						<img src="assets/img/cookai_hero.png" class="img-fluid" alt="Phone with CookAI app" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Hero -->
+
+		<main id="main">
+			<!-- ======= Benefits sections ======= -->
+			<section id="benefits" class="about">
+				<div class="container" data-aos="fade-up">
+					<div class="row gx-0">
+						<div class="col-lg-7 d-flex flex-column justify-content-center" data-aos="fade-up">
+							<div class="content">
+								<h2>Personalized Recipes Tailored to You</h2>
+								<p>
+									Tired of generic recipes that don't fit your lifestyle? CookAI's AI recipe generator
+									creates custom recipes based on your dietary restrictions (vegan, gluten-free, keto,
+									etc.), cuisine preferences (Italian, Mexican, Indian, etc.), and even the
+									ingredients you have on hand. No more scrolling through endless search results – get
+									delicious, personalized recipe ideas in seconds.
+								</p>
+								<div class="text-center text-lg-start">
+									<a
+										href="#hero"
+										class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center"
+									>
+										<span>Download Now</span>
+										<i class="bi bi-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-5 d-flex align-items-center" data-aos="zoom-out">
+							<img
+								src="assets/img/cookai-benefit-1.jpeg"
+								class="img-fluid"
+								alt="A chef in the kitchen with many ingredients"
+							/>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-5 hero-img" data-aos="zoom-out">
-					<img src="assets/img/cookai_hero.png" class="img-fluid" alt="Phone with CookAI app">
+
+				<div class="container" data-aos="fade-up">
+					<div class="row gx-0">
+						<div class="col-lg-7 d-flex flex-column justify-content-center" data-aos="fade-up">
+							<div class="content">
+								<h2>Effortless Meal Planning for Any Occasion</h2>
+								<p>
+									Say goodbye to meal planning stress. Whether you're looking for quick weeknight
+									dinners, healthy lunch ideas, or planning a special occasion feast, our AI meal
+									planner helps you create a menu you'll love. Generate a weekly meal plan with a
+									click of a button and spend less time worrying about what to cook.
+								</p>
+								<div class="text-center text-lg-start">
+									<a
+										href="#hero"
+										class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center"
+									>
+										<span>Download Now</span>
+										<i class="bi bi-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-5 d-flex align-items-center" data-aos="zoom-out">
+							<img
+								src="assets/img/cookai-benefit-2.jpeg"
+								class="img-fluid"
+								alt="A cook book on a kitchen table"
+							/>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
 
-	</section><!-- End Hero -->
-	
-	<main id="main">
-		<!-- ======= Benefits sections ======= -->
-		<section id="benefits" class="about">
+				<div class="container" data-aos="fade-up">
+					<div class="row gx-0">
+						<div class="col-lg-7 d-flex flex-column justify-content-center" data-aos="fade-up">
+							<div class="content">
+								<h2>Discover New Flavors and Expand Your Culinary Horizons</h2>
+								<p>
+									Want to try something new? CookAI helps you discover exciting new recipes and
+									explore different cuisines. From classic comfort food to exotic international
+									dishes, our AI-powered recommendations introduce you to flavors you might never have
+									considered. Rediscover the joy of cooking and impress your friends and family with
+									delicious, creative meals.
+								</p>
+								<div class="text-center text-lg-start">
+									<a
+										href="#hero"
+										class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center"
+									>
+										<span>Download Now</span>
+										<i class="bi bi-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
 
-			<div class="container" data-aos="fade-up">
-				<div class="row gx-0">
+						<div class="col-lg-5 d-flex align-items-center" data-aos="zoom-out">
+							<img src="assets/img/cookai-benefit-3.jpeg" class="img-fluid" alt="A cooking robot" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End About Section -->
 
-					<div class="col-lg-7 d-flex flex-column justify-content-center" data-aos="fade-up">
-						<div class="content">
-							<h2>Personalized Recipes Tailored to You</h2>
-							<p>
-								Tired of generic recipes that don't fit your lifestyle? CookAI's AI recipe generator creates custom recipes based on your dietary restrictions (vegan, gluten-free, keto, etc.), cuisine preferences (Italian, Mexican, Indian, etc.), and even the ingredients you have on hand. No more scrolling through endless search results – get delicious, personalized recipe ideas in seconds.
-							</p>
-							<div class="text-center text-lg-start">
-								<a href="#hero"
-									class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
+			<!-- ======= Features Section ======= -->
+			<section id="features" class="features">
+				<div class="container" data-aos="fade-up">
+					<!-- Feature Icons -->
+					<div class="row feature-icons" data-aos="fade-up">
+						<h3>Our Features</h3>
+
+						<div class="row">
+							<div class="col-xl-3 text-center" data-aos="fade-right" data-aos-delay="100">
+								<img
+									src="assets/img/features-3.png"
+									class="img-fluid p-4"
+									alt="A mobile phone with features"
+									style="max-width: 300px"
+								/>
+							</div>
+
+							<div class="col-xl-9 d-flex content">
+								<div class="row align-self-center gy-4">
+									<div class="col-md-6 icon-box" data-aos="fade-up">
+										<i class="bi bi-magic"></i>
+										<div>
+											<h4>AI-Powered Recipe Generation</h4>
+											<h5>
+												Harness the power of artificial intelligence to create personalized
+												recipes tailored to your specific needs. Simply input your available
+												ingredients, desired flavors, dietary restrictions, and preferred
+												cuisine, and CookAI will generate a unique recipe just for you. No more
+												brainstorming or searching through endless cookbooks – let CookAI handle
+												the creative process and unlock a world of culinary possibilities.
+											</h5>
+										</div>
+									</div>
+
+									<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+										<i class="bi bi-sliders"></i>
+										<div>
+											<h4>Customizable Difficulty</h4>
+											<h5>
+												Whether you're a kitchen novice or a seasoned chef, CookAI adapts to
+												your skill level. Adjust the difficulty setting to match your experience
+												and comfort in the kitchen. Choose from easy, quick recipes for
+												beginners or explore more challenging dishes to expand your culinary
+												expertise. CookAI ensures a rewarding cooking experience for everyone.
+											</h5>
+										</div>
+									</div>
+
+									<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+										<i class="bi bi-plug"></i>
+										<div>
+											<h4>Appliance Integration</h4>
+											<h5>
+												Maximize the potential of your kitchen appliances with seamless
+												integration. Tell CookAI if you have a pressure cooker, air fryer, slow
+												cooker, or other specialty appliances, and it will generate recipes
+												optimized for your equipment. Unlock new cooking techniques and create
+												delicious meals with ease, all while utilizing your favorite kitchen
+												gadgets.
+											</h5>
+										</div>
+									</div>
+
+									<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+										<i class="bi bi-bookmark-check"></i>
+										<div>
+											<h4>Save Your Favorites</h4>
+											<h5>
+												Build your personalized digital cookbook with ease. Save your favorite
+												CookAI-generated recipes and access them anytime, anywhere. No more lost
+												recipe cards or forgotten links – keep all your culinary treasures
+												organized and readily available for your next cooking adventure.
+											</h5>
+										</div>
+									</div>
+
+									<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+										<i class="bi bi-tree"></i>
+										<div>
+											<h4>Dietary Preferences</h4>
+											<h5>
+												Cater to any dietary need with CookAI's comprehensive support for
+												various restrictions. Whether you're vegetarian, vegan, gluten-free,
+												keto, paleo, or following another specific diet, CookAI will generate
+												recipes that meet your requirements. Enjoy delicious and healthy meals
+												without compromising your dietary lifestyle.
+											</h5>
+										</div>
+									</div>
+
+									<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+										<i class="bi bi-list-check"></i>
+										<div>
+											<h4>Step-by-Step Instructions</h4>
+											<h5>
+												Follow clear, concise, and easy-to-understand instructions for a
+												stress-free cooking experience. CookAI breaks down each recipe into
+												manageable steps, ensuring even complex dishes are easy to follow. Enjoy
+												the process of cooking with confidence, knowing you have a reliable
+												guide every step of the way.
+											</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="text-center text-lg-center" data-aos="fade-up" data-aos-delay="600">
+								<a
+									href="#hero"
+									class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center"
+								>
 									<span>Download Now</span>
 									<i class="bi bi-arrow-right"></i>
 								</a>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-lg-5 d-flex align-items-center" data-aos="zoom-out">
-						<img src="assets/img/cookai-benefit-1.jpeg" class="img-fluid" alt="A chef in the kitchen with many ingredients">
-					</div>
-
+					<!-- End Feature Icons -->
 				</div>
-			</div>
+			</section>
+			<!-- End Features Section -->
 
-			<div class="container" data-aos="fade-up">
-				<div class="row gx-0">
-
-					<div class="col-lg-7 d-flex flex-column justify-content-center" data-aos="fade-up">
-						<div class="content">
-							<h2>Effortless Meal Planning for Any Occasion</h2>
-							<p>
-								Say goodbye to meal planning stress. Whether you're looking for quick weeknight dinners, healthy lunch ideas, or planning a special occasion feast, our AI meal planner helps you create a menu you'll love. Generate a weekly meal plan with a click of a button and spend less time worrying about what to cook.
-							</p>
-							<div class="text-center text-lg-start">
-								<a href="#hero"
-									class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
-									<span>Download Now</span>
-									<i class="bi bi-arrow-right"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-5 d-flex align-items-center" data-aos="zoom-out">
-						<img src="assets/img/cookai-benefit-2.jpeg" class="img-fluid" alt="A cook book on a kitchen table">
-					</div>
-
-				</div>
-			</div>
-
-			<div class="container" data-aos="fade-up">
-				<div class="row gx-0">
-
-					<div class="col-lg-7 d-flex flex-column justify-content-center" data-aos="fade-up">
-						<div class="content">
-							<h2>Discover New Flavors and Expand Your Culinary Horizons</h2>
-							<p>
-								Want to try something new? CookAI helps you discover exciting new recipes and explore different cuisines. From classic comfort food to exotic international dishes, our AI-powered recommendations introduce you to flavors you might never have considered. Rediscover the joy of cooking and impress your friends and family with delicious, creative meals.
-							</p>
-							<div class="text-center text-lg-start">
-								<a href="#hero"
-									class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
-									<span>Download Now</span>
-									<i class="bi bi-arrow-right"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-5 d-flex align-items-center" data-aos="zoom-out">
-						<img src="assets/img/cookai-benefit-3.jpeg" class="img-fluid" alt="A cooking robot">
-					</div>
-
-				</div>
-			</div>
-
-		</section><!-- End About Section -->
-
-		<!-- ======= Features Section ======= -->
-		<section id="features" class="features">
-
-			<div class="container" data-aos="fade-up">
-
-				<!-- Feature Icons -->
-				<div class="row feature-icons" data-aos="fade-up">
-					<h3>Our Features</h3>
+			<!-- ======= Screenshots Section ======= -->
+			<section id="values" class="values">
+				<div class="container" data-aos="fade-up">
+					<header class="section-header">
+						<h2>App Screenshots</h2>
+					</header>
 
 					<div class="row">
-
-						<div class="col-xl-3 text-center" data-aos="fade-right" data-aos-delay="100">
-							<img src="assets/img/features-3.png" class="img-fluid p-4"
-								alt="A mobile phone with features" style="max-width: 300px;">
-						</div>
-
-						<div class="col-xl-9 d-flex content">
-							<div class="row align-self-center gy-4">
-
-								<div class="col-md-6 icon-box" data-aos="fade-up">
-									<i class="bi bi-magic"></i>
-									<div>
-										<h4>AI-Powered Recipe Generation</h4>
-										<h5>Harness the power of artificial intelligence to create personalized recipes tailored to your specific needs. Simply input your available ingredients, desired flavors, dietary restrictions, and preferred cuisine, and CookAI will generate a unique recipe just for you. No more brainstorming or searching through endless cookbooks – let CookAI handle the creative process and unlock a world of culinary possibilities.</h5>
-									</div>
-								</div>
-
-								<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-									<i class="bi bi-sliders"></i>
-									<div>
-										<h4>Customizable Difficulty</h4>
-										<h5>Whether you're a kitchen novice or a seasoned chef, CookAI adapts to your skill level. Adjust the difficulty setting to match your experience and comfort in the kitchen. Choose from easy, quick recipes for beginners or explore more challenging dishes to expand your culinary expertise. CookAI ensures a rewarding cooking experience for everyone.</h5>
-									</div>
-								</div>
-
-								<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-									<i class="bi bi-plug"></i>
-									<div>
-										<h4>Appliance Integration</h4>
-										<h5>Maximize the potential of your kitchen appliances with seamless integration. Tell CookAI if you have a pressure cooker, air fryer, slow cooker, or other specialty appliances, and it will generate recipes optimized for your equipment. Unlock new cooking techniques and create delicious meals with ease, all while utilizing your favorite kitchen gadgets.</h5>
-									</div>
-								</div>
-
-								<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-									<i class="bi bi-bookmark-check"></i>
-									<div>
-										<h4>Save Your Favorites</h4>
-										<h5>Build your personalized digital cookbook with ease. Save your favorite CookAI-generated recipes and access them anytime, anywhere. No more lost recipe cards or forgotten links – keep all your culinary treasures organized and readily available for your next cooking adventure.</h5>
-									</div>
-								</div>
-
-								<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-									<i class="bi bi-tree"></i>
-									<div>
-										<h4>Dietary Preferences</h4>
-										<h5>Cater to any dietary need with CookAI's comprehensive support for various restrictions. Whether you're vegetarian, vegan, gluten-free, keto, paleo, or following another specific diet, CookAI will generate recipes that meet your requirements. Enjoy delicious and healthy meals without compromising your dietary lifestyle.</h5>
-									</div>
-								</div>
-
-								<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-									<i class="bi bi-list-check"></i>
-									<div>
-										<h4>Step-by-Step Instructions</h4>
-										<h5>Follow clear, concise, and easy-to-understand instructions for a stress-free cooking experience. CookAI breaks down each recipe into manageable steps, ensuring even complex dishes are easy to follow. Enjoy the process of cooking with confidence, knowing you have a reliable guide every step of the way.</h5>
-									</div>
-								</div>
-
+						<div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+							<div class="box">
+								<a
+									href="assets/img/cookai/1.jpg"
+									data-gallery="portfolioGallery"
+									class="portfokio-lightbox"
+								>
+									<img
+										src="assets/img/cookai/1.jpg"
+										class="img-fluid"
+										alt="Keep your favorite recipes on you mobile phone"
+									/>
+								</a>
 							</div>
 						</div>
 
-						<div class="text-center text-lg-center" data-aos="fade-up" data-aos-delay="600">
-							<a href="#hero"
-								class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
-								<span>Download Now</span>
-								<i class="bi bi-arrow-right"></i>
-							</a>
+						<div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+							<div class="box">
+								<a
+									href="assets/img/cookai/2.jpg"
+									data-gallery="portfolioGallery"
+									class="portfokio-lightbox"
+								>
+									<img
+										src="assets/img/cookai/2.jpg"
+										class="img-fluid"
+										alt="Create recipes of any dish you like"
+									/>
+								</a>
+							</div>
 						</div>
 
-					</div>
+						<div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
+							<div class="box">
+								<a
+									href="assets/img/cookai/3.jpg"
+									data-gallery="portfolioGallery"
+									class="portfokio-lightbox"
+								>
+									<img
+										src="assets/img/cookai/3.jpg"
+										class="img-fluid"
+										alt="Or pick ingredients and your preferred taste"
+									/>
+								</a>
+							</div>
+						</div>
 
-				</div><!-- End Feature Icons -->
-
-			</div>
-
-		</section><!-- End Features Section -->
-
-		<!-- ======= Screenshots Section ======= -->
-		<section id="values" class="values">
-
-			<div class="container" data-aos="fade-up">
-
-				<header class="section-header">
-					<h2>App Screenshots</h2>
-				</header>
-
-				<div class="row">
-
-					<div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-						<div class="box">
-							<a href="assets/img/cookai/1.jpg" data-gallery="portfolioGallery"
-								class="portfokio-lightbox">
-								<img src="assets/img/cookai/1.jpg" class="img-fluid" alt="Keep your favorite recipes on you mobile phone">
-							</a>
-							</p>
+						<div class="col-lg-3" data-aos="fade-up" data-aos-delay="400">
+							<div class="box">
+								<a
+									href="assets/img/cookai/4.jpg"
+									data-gallery="portfolioGallery"
+									class="portfokio-lightbox"
+								>
+									<img src="assets/img/cookai/4.jpg" class="img-fluid" alt="Set your preferences" />
+								</a>
+							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
-						<div class="box">
-							<a href="assets/img/cookai/2.jpg" data-gallery="portfolioGallery"
-								class="portfokio-lightbox">
-								<img src="assets/img/cookai/2.jpg" class="img-fluid"
-									alt="Create recipes of any dish you like">
-							</a>
-							</p>
-						</div>
+				<br />
+
+				<div class="text-center text-lg-center" data-aos="fade-up" data-aos-delay="500">
+					<a
+						href="#hero"
+						class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center"
+					>
+						<span>Download Now</span>
+						<i class="bi bi-arrow-right"></i>
+					</a>
+				</div>
+			</section>
+			<!-- End Screenshots Section -->
+		</main>
+		<!-- End #main -->
+
+		<!-- ======= Footer ======= -->
+		<footer id="footer" class="footer">
+			<script
+				async
+				src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
+				crossorigin="anonymous"
+			></script>
+			<!-- banner -->
+			<ins
+				class="adsbygoogle"
+				style="display: block"
+				data-ad-client="ca-pub-4433921005109890"
+				data-ad-slot="5897028545"
+				data-ad-format="auto"
+				data-full-width-responsive="true"
+			></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+
+			<div class="container">
+				<div class="copyright">
+					<div class="social-links m-3">
+						<a href="https://tiktok.com/@greetextai" target="_blank" class="tiktok"
+							><i class="bi bi-tiktok"></i
+						></a>
+						<a href="https://instagram.com/greetextai/" target="_blank" class="instagram"
+							><i class="bi bi-instagram"></i
+						></a>
 					</div>
-
-					<div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
-						<div class="box">
-							<a href="assets/img/cookai/3.jpg" data-gallery="portfolioGallery"
-								class="portfokio-lightbox">
-								<img src="assets/img/cookai/3.jpg" class="img-fluid" alt="Or pick ingredients and your preferred taste">
-							</a>
-							</p>
-						</div>
+					<div>
+						<a href="terms.html">Terms & Conditions</a>
 					</div>
-
-					<div class="col-lg-3" data-aos="fade-up" data-aos-delay="400">
-						<div class="box">
-							<a href="assets/img/cookai/4.jpg" data-gallery="portfolioGallery"
-								class="portfokio-lightbox">
-								<img src="assets/img/cookai/4.jpg" class="img-fluid" alt="Set your preferences">
-							</a>
-							</p>
-						</div>
+					<div>
+						<a href="privacy.html">Privacy Policy</a>
 					</div>
-
+					<div>
+						<a href="mailto:support@greetextai.com" target="_blank">Contact Us</a>
+					</div>
+					&copy; Copyright 2024 <strong><span>Greetext AI</span></strong
+					>. All Rights Reserved
 				</div>
-
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+				</div>
 			</div>
+		</footer>
+		<!-- End Footer -->
 
-			<br>
+		<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+			><i class="bi bi-arrow-up-short"></i
+		></a>
 
-			<div class="text-center text-lg-center" data-aos="fade-up" data-aos-delay="500">
-				<a href="#hero"
-					class="btn-filled d-inline-flex align-items-center justify-content-center align-self-center">
-					<span>Download Now</span>
-					<i class="bi bi-arrow-right"></i>
-				</a>
-			</div>
+		<!-- Vendor JS Files -->
+		<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+		<script src="assets/vendor/aos/aos.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+		<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+		<script src="assets/vendor/php-email-form/validate.js"></script>
 
-		</section><!-- End Screenshots Section -->
+		<!-- Template Main JS File -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/utils.js"></script>
 
-	</main><!-- End #main -->
-
-	<!-- ======= Footer ======= -->
-	<footer id="footer" class="footer">
-
-		<script async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4433921005109890"
-			crossorigin="anonymous"></script>
-		<!-- banner -->
-		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4433921005109890"
-			data-ad-slot="5897028545" data-ad-format="auto" data-full-width-responsive="true"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-
-		<div class="container">
-			<div class="copyright">
-				<div class="social-links m-3">
-					<a href="https://tiktok.com/@greetextai" target="_blank" class="tiktok"><i class="bi bi-tiktok"></i></a>
-					<a href="https://instagram.com/greetextai/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-				</div>
-				<div>
-					<a href="terms.html">Terms & Conditions</a>
-				</div>
-				<div>
-					<a href="privacy.html">Privacy Policy</a>
-				</div>
-				<div>
-					<a href="mailto:support@greetextai.com" target="_blank">Contact Us</a>
-				</div>
-				&copy; Copyright 2024 <strong><span>Greetext AI</span></strong>. All Rights Reserved
-			</div>
-			<div class="credits">
-				<!-- All the links in the footer should remain intact. -->
-				<!-- You can delete the links only if you purchased the pro version. -->
-				<!-- Licensing information: https://bootstrapmade.com/license/ -->
-				<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-			</div>
+		<!-- Cookie Banner -->
+		<div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+			<p>
+				<strong>This website uses cookies</strong>
+			</p>
+			<p>
+				We use cookies to analyze our traffic and to allow the best experience possible. By clicking "I Accept",
+				you agree to our use of cookies and our privacy policy.
+				<a href="https://www.cookiesandyou.com/" target="_blank">Learn more</a>
+			</p>
+			<p>
+				<button type="button" class="btn btn-primary btn-sm" onclick="window.cb_hideCookieBanner()">
+					I Accept
+				</button>
+			</p>
 		</div>
-	</footer><!-- End Footer -->
-
-	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-			class="bi bi-arrow-up-short"></i></a>
-
-	<!-- Vendor JS Files -->
-	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-	<script src="assets/vendor/aos/aos.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="assets/vendor/php-email-form/validate.js"></script>
-
-	<!-- Template Main JS File -->
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/utils.js"></script>
-
-	<!-- Cookie Banner -->
-	<div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
-		<p>
-			<strong>This website uses cookies</strong>
-		</p>
-		<p>
-			We use cookies to analyze our traffic and to allow the best experience possible. By clicking "I Accept", you
-			agree to our use of cookies and our privacy policy.
-			<a href="https://www.cookiesandyou.com/" target="_blank">Learn more</a>
-		</p>
-		<p>
-			<button type="button" class="btn btn-primary btn-sm" onclick="window.cb_hideCookieBanner()">
-				I Accept
-			</button>
-		</p>
-	</div>
-	<script src="assets/js/cookies.js"></script>
-	<!-- End of Cookie Banner -->
-</body>
-
+		<script src="assets/js/cookies.js"></script>
+		<!-- End of Cookie Banner -->
+	</body>
 </html>
