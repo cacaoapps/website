@@ -9,6 +9,8 @@
 .history
 .svn/
 migrate_working_dir/
+genarticle.js
+serviceAccountKey.json
 
 # IntelliJ related
 *.iml
