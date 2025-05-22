@@ -11,6 +11,9 @@
 migrate_working_dir/
 genarticle.*
 serviceAccountKey.json
+package.json
+package-lock.json
+node_modules/
 
 # IntelliJ related
 *.iml
