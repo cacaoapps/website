@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test Deep Link</title>
+		<script>
+			function updateDeepLink() {
+				const date = document.getElementById("datePicker").value;
+				const deepLink = document.getElementById("deepLink");
+				deepLink.href = `deliber:///order/?date=${date}`;
+				deepLink.textContent = `Open my app with date ${date}`;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Test Deliber deep link</h1>
+		<input type="date" id="datePicker" />
+		<button onclick="updateDeepLink()">Set Date</button>
+		<a id="deepLink" href="deliber:///order/?date=2025-09-10">Open my app</a>
+	</body>
+</html>
